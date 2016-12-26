@@ -1,11 +1,13 @@
 define(['jquery','apikey'],function($,apikey) {
 
-  var list = function() {
+  var list = function(cb) {
     $.ajax({
       url:this.url+'/api/dbs/course',
+      dataType:'json',
       data:{'apikey':apikey.key}
     }).done(function(msg) {
       console.log(msg);
+      cb(msg);     
     });
   }
 
