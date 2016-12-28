@@ -1,6 +1,8 @@
+/*
 var initIndex = function()
 {
 	//ajaxGet('')
+	ajaxGet('')
 }
 
 var ajaxGet = function(urlPath, onSuccessFn)
@@ -13,4 +15,4 @@ var ajaxGet = function(urlPath, onSuccessFn)
             console.log(error);
         }
     });
-}
+}*/
