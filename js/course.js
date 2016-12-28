@@ -1,7 +1,7 @@
 define(['jquery','apikey'],function($,apikey) {
 
   var list = function(cb) {
-		if(this.key = '')
+		if(this.key != '')
 		{
 			$.ajax({
 				url:this.url+'/api/dbs/'+this.dbs+'/'+this.key+'?apikey='+apikey.key,

@@ -8,7 +8,8 @@ define(['jquery','course'],function($,Course) {
     test: function() {
       return 'Test';
     },
-    'course':new Course(url,'course_index','GET','SchoolTimeID','10119')
+    //'course':new Course(url,'course_index','GET','SchoolTimeID','10119','')
+		'course':new Course(url,'course','GET','','','67ba3cb0caa211e6b9dafdedc5a41a9f')
   }
 
   return QinfoIndicator;
