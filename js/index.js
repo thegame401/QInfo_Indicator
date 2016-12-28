@@ -1,18 +1,18 @@
 /*
 var initIndex = function()
 {
-	//ajaxGet('')
-	ajaxGet('')
+  //ajaxGet('')
+  ajaxGet('')
 }
 
 var ajaxGet = function(urlPath, onSuccessFn)
 {
-	$.ajax({
-        url: urlPath,
-        dataType: 'json',
-        success: onSuccessFn,
-        error: function (request, status, error) {
-            console.log(error);
-        }
-    });
+  $.ajax({
+    url: urlPath,
+    dataType: 'json',
+    success: onSuccessFn,
+    error: function (request, status, error) {
+       console.log(error);
+    }
+  });
 }*/
