@@ -28,8 +28,9 @@ require(['jquery','query'],function($,
         content.append('METHOD ::get<br>');
         content.append('DB ::'+test.db+'<br>');
         content.append('VIEW ::'+test.view+'<br>');
-        content.append('QUERY ::'+JSON.stringify(test.get)+'<br><br>');
-        content.append(q.toHTML(result.value.doc));
+        content.append('QUERY ::'+JSON.stringify(test.get)+'<br>');
+        content.append('RESULT ::<br>');
+        content.append('<pre>'+JSON.stringify(result,null,2)+'</pre>');
       });
     }
 
@@ -39,10 +40,9 @@ require(['jquery','query'],function($,
         content.append('METHOD ::list<br>');
         content.append('DB ::'+test.db+'<br>');
         content.append('VIEW ::'+test.view+'<br>');
-        content.append('QUERY ::'+JSON.stringify(test.list)+'<br><br>');
-        result.forEach(function(item) {
-          content.append(q.toHTML(item.value));
-        });
+        content.append('QUERY ::'+JSON.stringify(test.list)+'<br>');
+        content.append('RESULT ::<br>');
+        content.append('<pre>'+JSON.stringify(result,null,2)+'</pre>');
       });
     }
   });
