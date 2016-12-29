@@ -24,19 +24,25 @@ require(['jquery','query'],function($,
   test_sets.forEach(function(test) {
     if(test.get) {
       q.get(test.db,test.view,test.get,function(err,result) {
-        content.append('<p>GET: <b>'+test.name+'</b><br>');
+        content.append('<p><b class="red">'+test.name+'</b><br><hr>');
+        content.append('METHOD ::get<br>');
+        content.append('DB ::'+test.db+'<br>');
+        content.append('VIEW ::'+test.view+'<br>');
+        content.append('QUERY ::'+JSON.stringify(test.get)+'<br><br>');
         content.append(q.toHTML(result.value.doc));
-        content.append('</p>');
       });
     }
 
     if(test.list) {
       q.list(test.db,test.view,test.list,function(err,result) {
-        content.append('<p>List :<b>'+test.name+'</b><br>');
+        content.append('<p><b class="red">'+test.name+'</b><br><hr>');
+        content.append('METHOD ::list<br>');
+        content.append('DB ::'+test.db+'<br>');
+        content.append('VIEW ::'+test.view+'<br>');
+        content.append('QUERY ::'+JSON.stringify(test.list)+'<br><br>');
         result.forEach(function(item) {
           content.append(q.toHTML(item.value));
         });
-        content.append('</p>');
       });
     }
   });
