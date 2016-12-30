@@ -13,6 +13,18 @@ require(['jquery','query'],function($,
        'db': 'educationchild',
        'view' : 'cid',
        'list': {'start':['111'],'end':['112'],limit:10}
+    },
+    {  
+       'name':'TEST 3 LIST student by hostid [3720140208]',
+       'db': 'educationchild',
+       'view' : 'host_cid',
+       'list': {'start':['3720140208'],'end':['3720140208f'],limit:2}
+    },
+    {  
+       'name':'TEST 4 LIST student by [3720140208,5]',
+       'db': 'educationchild',
+       'view' : 'host_class_room',
+       'list': {'start':['3720140208',5],'end':['3720140208',6],include_doc:true}
     }
   ];
   
