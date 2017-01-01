@@ -5,4 +5,12 @@ require.config({
   }
 });
 
-requirejs(["test"]);
+//requirejs(["test"]);
+
+
+requirejs(["examratio","knowledgestructure"], function(examratio,know){
+	var a = examratio.get_from_schooltime(75577);
+	var b = know.get_from_schooltime(75577);
+	console.log(a);
+	console.log(b);
+});
